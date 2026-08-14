@@ -16,3 +16,16 @@ D. Locale.setDefault(Locale.Category.FORMAT, "ja_JP");
 
 
 E. Locale.setDefault("ja_JP");
+
+
+
+
+#Locale.setDefault には 2 種類のオーバーロード：  
+
+全体のデフォルトロケールを設定する  
+`public static void setDefault(Locale newLocale)`  
+
+
+カテゴリごとのデフォルトロケールを設定する  
+`public static void setDefault(Locale.Category category, Locale newLocale)`    
+

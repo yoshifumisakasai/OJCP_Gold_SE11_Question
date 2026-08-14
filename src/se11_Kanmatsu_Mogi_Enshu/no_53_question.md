@@ -71,3 +71,33 @@ C. int result = list.stream()
 D. int result = list.stream()
    .mapToInt(o -> o.getPrice() * 10)
    .reduce(0, op);
+   
+   
+#選択肢判定
+
+
+B.
+
+```
+int result = list.stream()
+    .map(Order::getPrice * 10)
+    .reduce(op)
+    .orElse(0);
+```
+    
+❌ Order::getPrice * 10 は文法エラー
+→ **メソッド参照に演算はできないため、コンパイルエラー**  
+
+C.
+
+```
+int result = list.stream()
+    .map(o -> o.getPrice() * 10)
+    .reduce(op)
+    .ifPresent(p -> p.intValue();
+```
+
+❌ **ifPresent は戻り値が voidであるため、int result = ... に代入できない**  
+→ コンパイルエラー  
+`void ifPresent(Consumer<? super T> action)`  
+引数の Consumer は「値を受け取って処理する」だけで、値を返すことはできない　　

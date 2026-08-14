@@ -1,8 +1,6 @@
 設問29
 
-
 次のプログラムをコンパイル、実行したときの結果として、正しいものを選べ（１つ）
-
 
 □コード1
 
@@ -17,7 +15,6 @@ public class SampleException extends Exception{
 
 ```
 
-
 □コード2
 
 ```
@@ -29,8 +26,6 @@ public class TestException extends SampleException{
 }
 
 ```
-
-
 
 □コード3
 
@@ -47,7 +42,6 @@ public class Sample {
    throw new RuntimeException("B");
   }
  } 
-
 
 public static void main(String[] args){
 
